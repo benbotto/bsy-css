@@ -1,0 +1,80 @@
+/* A "row" is a horizontal container, and a "col" is a vertical container. */
+.row, .col {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row { flex-direction: row;    }
+.col { flex-direction: column; }
+
+/* Rows and columns can optionally have gutters, which add a bit of margin
+ * between cells. */
+.row-gttrs, .col-gttrs {
+  margin: (-$gutter-size) 0 0 (-$gutter-size);
+}
+
+.row-gttrs > .cell,
+.row-gttrs > *[class*="cell-"],
+.col-gttrs > .cell,
+.col-gttrs > *[class*="cell-"] {
+  padding: $gutter-size 0 0 $gutter-size;
+}
+
+/* Main-axis alignment of contained items. */
+.row-jstfy-strt, .col-jstfy-strt { justify-content: flex-start;    }
+.row-jstfy-end,  .col-jstfy-end  { justify-content: flex-end;      }
+.row-jstfy-cntr, .col-jstfy-cntr { justify-content: center;        }
+.row-jstfy-btwn, .col-jstfy-btwn { justify-content: space-between; }
+.row-jstfy-arnd, .col-jstfy-arnd { justify-content: space-around;  }
+
+/* Cross-axis alignment. */
+.row-algn-strt,   .col-algn-strt   { align-items: flex-start; }
+.row-algn-end,    .col-algn-end    { align-items: flex-end;   }
+.row-algn-cntr,   .col-algn-cntr   { align-items: center;     }
+.row-algn-strtch, .col-algn-strtch { align-items: stretch;    }
+.row-algn-bsln,   .col-algn-bsln   { align-items: baseline;   }
+
+/* Cell cross-axis alignment. */
+.cell-strt { align-self: flex-start; }
+.cell-end  { align-self: flex-end;   }
+.cell-cntr { align-self: center;     }
+
+/* Helper mixin that prints cell styles. */
+@mixin cells($prefix) {
+  /* Auto-sized cell. */
+  .row > .cell-#{$prefix} { flex: 1; }
+
+  /* Full width cell. */
+  .row > .cell-#{$prefix}-1,
+  .col > .cell-#{$prefix}-1 {
+    flex: 0 0 100%;
+  }
+
+  @for $i from 1 through 11 {
+    @for $j from $i+1 through 12 {
+      .row > .cell-#{$prefix}-#{$i}_#{$j},
+      .col > .cell-#{$prefix}-#{$i}_#{$j} {
+        flex: 0 0 percentage($i/$j);
+      }
+    }
+  }
+}
+
+/* Default percentage widths (mobile first).  Remove the flex, and use the
+ * specified percentage.  Ex: .cell-4_5 means to make the cell 4/5s the size of
+ * the container. */
+@include cells("xs");
+
+/* Percentage widths for larger devices. */
+@media (min-width: 768px) {
+  @include cells("sm");
+}
+
+@media (min-width: 992px) {
+  @include cells("md");
+}
+
+@media (min-width: 1200px) {
+  @include cells("lg");
+}
+
