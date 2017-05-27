@@ -1,13 +1,13 @@
 .hamburger {
   cursor: pointer;
-	padding: 10px;
+	padding: 5px;
 	border-radius: 4px;
 	border: 1px solid $border-color-dark;
-  background-color: $bg-color-action;
+  background-color: $red;
   @include inset-shadow();
 
   .bar {
-    width: 40px;
+    width: 35px;
     height: 4px;
     background-color: $fg-color-primary;
     margin: 6px 0;
@@ -24,6 +24,6 @@
 }
 
 .hamburger:hover {
-  background-color: darken($bg-color-action, 5%);
+  background-color: $bg-color-primary;
 }
 

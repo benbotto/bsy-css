@@ -1,0 +1,25 @@
+.btn {
+  display: inline-block;
+  border: none;
+  color: $fg-color-primary;
+  text-decoration: none;
+  padding: 10px;
+  background-color: $bg-color-primary;
+  @include inset-shadow();
+  @include border-radius();
+
+  .fa {
+    border-right: 1px solid $fg-color-primary;
+    padding-right: .5rem;
+  }
+}
+
+.btn:hover {
+  background-color: darken($bg-color-primary, 5%);
+}
+
+.btn-red    { background-color: $red;    }
+.btn-green  { background-color: $green;  }
+.btn-blue   { background-color: $blue;   }
+.btn-purple { background-color: $purple; }
+.btn-pink   { background-color: $pink;   }
