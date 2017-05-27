@@ -1,0 +1,25 @@
+.hamburger {
+  cursor: pointer;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid $border-color-dark;
+  background-color: $bg-color-action;
+  @include inset-shadow();
+
+  .bar {
+    width: 40px;
+    height: 4px;
+    background-color: $fg-color-primary;
+    margin: 6px 0;
+    transform: none;
+    transition: transform $transition-duration-primary $transition-timing-function-primary;
+    @include border-radius();
+  }
+}
+
+.hamburger.active {
+  .bar:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+  .bar:nth-child(2) { transform: rotate(45deg); }
+  .bar:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+}
+

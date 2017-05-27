@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout Example</title>
+
+    <link rel="stylesheet" href="../../build/bsy.css">
+    <style type="text/css">
+      .main {
+        min-height: 100vh;
+        background-color: #333;
+        color: #ccc;
+      }
+
+      .header {
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main col">
+      <header class="header row row-jstfy-end">
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </header>
+
+      <div class="content cell">
+        <div>Content</div>
+      </div>
+    </div>
+
+    <script>
+      'use strict';
+
+      const burger = document.querySelector('.hamburger');
+      burger.onclick = function(e) {
+        e.currentTarget.classList.toggle('active');
+      };
+    </script>
+  </body>
+</html>

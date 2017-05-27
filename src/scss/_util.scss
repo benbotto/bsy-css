@@ -1,6 +1,16 @@
-/** Borders **/
-.brdr   { border:        1px solid $border-color; }
-.brdr-t { border-top:    1px solid $border-color; }
-.brdr-l { border-left:   1px solid $border-color; }
-.brdr-b { border-bottom: 1px solid $border-color; }
-.brdr-r { border-right:  1px solid $border-color; }
+/* Borders. */
+.brdr   { border:        1px solid $border-color-primary; }
+.brdr-t { border-top:    1px solid $border-color-primary; }
+.brdr-l { border-left:   1px solid $border-color-primary; }
+.brdr-b { border-bottom: 1px solid $border-color-primary; }
+.brdr-r { border-right:  1px solid $border-color-primary; }
+
+/* Shadows. */
+@mixin inset-shadow() {
+	box-shadow: 0 0 7px 1px #000 inset;
+}
+
+/* Rounded corners. */
+@mixin border-radius() {
+	border-radius: 4px;
+}

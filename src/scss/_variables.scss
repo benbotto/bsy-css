@@ -1,6 +1,19 @@
+/* Font definitions. */
 $font-size-base: 14px;
 $font-face: arial, sans-serif;
 
+/* Position definitions. */
 $gutter-size: 1rem;
 
-$border-color: #ccc;
+/* Color definitions. */
+$bg-color-primary: #333;
+$bg-color-action: #c14141;
+
+$fg-color-primary: #efefef;
+
+$border-color-primary: $fg-color-primary;
+$border-color-dark: #444;
+
+/* Transitions. */
+$transition-duration-primary: .1s;
+$transition-timing-function-primary: linear;
