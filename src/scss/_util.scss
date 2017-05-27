@@ -10,6 +10,10 @@
 	box-shadow: 0 0 7px 1px #000 inset;
 }
 
+@mixin subtle-shadow() {
+	box-shadow: 0 0 7px 1px #222;
+}
+
 /* Rounded corners. */
 @mixin border-radius() {
 	border-radius: 4px;
