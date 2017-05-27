@@ -19,8 +19,36 @@
         padding: 10px;
       }
 
-      .menu ul {
-        margin-top: -78px; /* Header height. */
+      .main > .main-menu {
+        flex: 0 0 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+
+      .main > .content {
+        opacity: 1;
+      }
+
+      .main > .content,
+      .main > .main-menu {
+        transition: opacity .5s linear;
+      }
+
+      .main > .content.menu-expanded {
+        flex: 0 0 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+
+      .main > .main-menu.menu-expanded {
+        flex: 1;
+        opacity: 1;
+        overflow: visible;
+      }
+
+      .main > .main-menu ul,
+      .main > .content ul {
+        margin-top: -66px; /* Header height. */
       }
     </style>
   </head>
@@ -35,7 +63,7 @@
         </div>
       </header>
 
-      <nav class="menu cell row row-jstfy-cntr row-algn-cntr">
+      <nav class="menu main-menu cell row row-jstfy-cntr row-algn-cntr">
         <ul>
           <li>
             <a href="#" class="btn btn-blue">
@@ -64,108 +92,29 @@
         </ul>
       </nav>
 
-      <div class="content cell" style="display: none;">
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
-        <div>Content</div>
+      <div class="content cell menu row row-jstfy-cntr row-algn-cntr">
+				<ul>
+					<li>
+						<button class="btn btn-google">
+							<i class="google-sign-in fa fa-google"></i>
+							<span>Sign in with <b>Google</b></span>
+						</button>
+					</li>
+
+					<li>
+						<button class="btn btn-facebook">
+							<i class="google-sign-in fa fa-facebook"></i>
+							<span>Sign in with <b>Facebook</b></span>
+						</button>
+					</li>
+
+					<li>
+						<button class="btn btn-twitter">
+							<i class="google-sign-in fa fa-twitter"></i>
+							<span>Sign in with <b>Twitter</b></span>
+						</button>
+					</li>
+				</ul>
       </div>
     </div>
 
@@ -175,6 +124,8 @@
       const burger = document.querySelector('.hamburger');
       burger.onclick = function(e) {
         e.currentTarget.classList.toggle('active');
+        document.querySelector('.main > .content').classList.toggle('menu-expanded');
+        document.querySelector('.main > .menu').classList.toggle('menu-expanded');
       };
     </script>
   </body>
