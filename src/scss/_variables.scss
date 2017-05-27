@@ -6,8 +6,14 @@ $font-face: arial, sans-serif;
 $gutter-size: 1rem;
 
 /* Color definitions. */
+$green: #025f12;
+$red: #c14141;
+$blue: #024154;
+$purple: #58054e;
+$pink: #ad0351;
+
 $bg-color-primary: #333;
-$bg-color-action: #c14141;
+$bg-color-action: $red;
 
 $fg-color-primary: #efefef;
 
