@@ -5,6 +5,7 @@
   text-decoration: none;
   padding: 10px;
   background-color: $bg-color-primary;
+	border: 1px solid $border-color-dark;
   @include inset-shadow();
   @include border-radius();
 
