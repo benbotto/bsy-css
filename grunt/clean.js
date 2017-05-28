@@ -1,8 +1,8 @@
-module.exports = function(grunt) {
+module.exports = function(grunt, buildDir) {
   'use strict';
 
   const clean = {
-    build: ['build']
+    build: [buildDir]
   };
 
   grunt.loadNpmTasks('grunt-contrib-clean');

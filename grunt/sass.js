@@ -1,10 +1,10 @@
-module.exports = function(grunt, buildDir, appName) {
+module.exports = function(grunt, buildDir) {
   'use strict';
 
   const sass = {
     dist: {
       files: {
-        'build/bsy.css' : 'src/scss/bsy.scss'
+        [`${buildDir}bsy.css`] : 'src/scss/bsy.scss'
       },
       options: {
         sourceMap: false,
@@ -12,7 +12,7 @@ module.exports = function(grunt, buildDir, appName) {
     },
     dev: {
       files: {
-        'build/bsy.css' : 'src/scss/bsy.scss'
+        [`${buildDir}bsy.css`] : 'src/scss/bsy.scss'
       },
       options: {
         sourceMap: true,

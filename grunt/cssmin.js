@@ -1,10 +1,10 @@
-module.exports = function(grunt, scripts) {
+module.exports = function(grunt, buildDir) {
   'use strict';
 
   const cssmin = {
     dist: {
       files: {
-        'build/bsy.css' : 'build/bsy.css'
+        [`${buildDir}bsy.css`] : `${buildDir}bsy.css`
       }
     }
   };
