@@ -1,0 +1,19 @@
+{
+  "name": "bsy-css",
+  "description": "CSS for busybin projects.",
+  "main": "bsy.css",
+  "authors": [
+    "Ben Botto"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/benbotto/bsy-css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/benbotto/bsy-css.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}
