@@ -14,7 +14,15 @@
   box-shadow: 0 0 7px 1px #222;
 }
 
+.subtle-shadow {
+  @include subtle-shadow();
+}
+
 /* Rounded corners. */
 @mixin border-radius() {
   border-radius: 4px;
+}
+
+.border-radius {
+  @include border-radius();
 }

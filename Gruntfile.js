@@ -3,8 +3,7 @@
 module.exports = function(grunt) {
   'use strict';
 
-  const version  = require('./package.json').version;
-  const buildDir = `${__dirname}/build/${version}/`;
+  const buildDir = `${__dirname}/build/`;
 
   grunt.initConfig({
     watch:  require('./grunt/watch')(grunt),
