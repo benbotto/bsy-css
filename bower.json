@@ -15,8 +15,5 @@
     "**/.*",
     "node_modules",
     "bower_components"
-  ],
-  "dependencies": {
-    "bsy-css": "^0.0.2"
-  }
+  ]
 }
