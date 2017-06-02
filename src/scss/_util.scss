@@ -26,3 +26,12 @@
 .border-radius {
   @include border-radius();
 }
+
+/* Circle objects. */
+@mixin circle() {
+  border-radius: 50%;
+}
+
+.circle {
+  @include circle();
+}
