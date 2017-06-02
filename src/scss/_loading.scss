@@ -1,0 +1,37 @@
+.loading {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.loading::before,
+.loading::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: $fg-color-primary;
+  animation-name: load;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loading::before {
+}
+
+.loading::after {
+  animation-delay: -.5s;
+  animation-direction: reverse;
+}
+
+@keyframes load {
+  0%   { opacity: .5; transform: translateX(0)    translateY(0)    scale(1,  1);  }
+  25%  { opacity: 1;  transform: translateX(100%) translateY(0)    scale(.5, .5); }
+  50%  { opacity: .5; transform: translateX(100%) translateY(100%) scale(1,  1);  }
+  75%  { opacity: 1;  transform: translateX(0)    translateY(100%) scale(.5, .5); }
+  100% { opacity: .5; transform: translateX(0)    translateY(0)    scale(1,  1);  }
+}
+
