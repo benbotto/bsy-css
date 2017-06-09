@@ -1,6 +1,6 @@
 {
   "name": "bsy-css",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "CSS for busybin projects.",
   "main": "bsy.css",
   "scripts": {
