@@ -1,0 +1,77 @@
+/* Fixed, translucent background. */
+.overlay {
+  display: none;
+  background-color: rgba($bg-color-primary, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.overlay.open {
+  display: flex;
+}
+
+/* The modal window, with a header, article, and footer. */
+.modal {
+  @include subtle-shadow();
+  @include border-radius();
+  /* The auto margin centers vertically and horizontally, but does not cut
+     of the top when the modal window overflows vertically. */
+  margin: auto;
+  max-width: 400px;
+  background-color: $bg-color-primary;
+
+  header,
+  footer {
+    @extend .row;
+    padding: 1rem;
+  }
+
+  header {
+    @extend .row-jstfy-btwn;
+    @extend .row-algn-cntr;
+    @include subtle-shadow();
+    font-weight: bold;
+
+    /* The close button, which is two transformed lines that make an X. */
+    button.close {
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+      margin-left: 1rem;
+    }
+
+    button.close:before,
+    button.close:after {
+      @include border-radius();
+      @include subtle-shadow();
+      content: '';
+      display: block;
+      width: 35px;
+      height: 4px;
+      background-color: $fg-color-primary;
+      margin: 6px 0;
+    }
+
+    button.close:before {
+      transform: translateY(5px) rotate(45deg);
+    }
+
+    button.close:after {
+      transform: translateY(-5px) rotate(-45deg);
+    }
+  }
+
+  article {
+    padding: 2rem 1rem;
+  }
+
+  footer {
+    @extend .row-jstfy-end;
+    border-top: 1px solid $border-color-dark;
+  }
+}
+
