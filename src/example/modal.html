@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modal Example</title>
+
+    <link rel="stylesheet" href="../../build/bsy.css">
+
+    <style type="text/css">
+      .main {
+        min-height: 100vh;
+        background-color: #333;
+        color: #ccc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main col col-jstfy-cntr">
+      <div class="row row-jstfy-cntr">
+        <button id="btnModal" class="btn btn-green">Show Modal</button>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in
+          vulputate dolor, at fermentum ligula. Fusce vel felis dignissim,
+          cursus elit in, dignissim erat. Fusce pretium tempor libero, et
+          accumsan velit commodo sed. Phasellus eleifend sapien libero, id
+          rutrum erat ullamcorper et. Integer nibh nisl, sollicitudin vel
+          mattis non, venenatis non tortor. Morbi gravida mauris non dui
+          varius, facilisis semper risus accumsan. Integer euismod egestas
+          lacus sit amet gravida. Cras ac nibh quis tellus dignissim efficitur
+          vel vitae metus. Morbi quis mollis lorem. Aliquam erat volutpat. Nunc
+          ac vulputate sem. Aenean nec tortor eget mauris euismod viverra.
+          Nulla in eros risus.
+        </p>
+        <p>
+          Donec vulputate enim sed massa euismod bibendum. Sed est ligula,
+          aliquet et sagittis ut, pharetra quis dolor. Cras non dapibus dolor.
+          Cras fermentum dignissim neque, sed pulvinar arcu scelerisque nec.
+          Fusce fermentum lobortis dolor ut hendrerit. In fringilla nibh id est
+          imperdiet varius. Sed volutpat ut mi id facilisis. Etiam laoreet
+          consequat est, sed tincidunt risus porta et. Vestibulum nunc massa,
+          tincidunt eu odio eu, volutpat facilisis erat. Proin vel justo id
+          turpis bibendum ultricies.
+        </p>
+        <p>
+          Donec sollicitudin nunc erat, sed efficitur mi viverra vitae. Nunc
+          bibendum eu elit at ultricies. Donec euismod convallis ornare. Donec
+          tempus non est vel suscipit. Etiam quis diam pellentesque, scelerisque
+          risus sit amet, interdum nibh. Suspendisse et tortor ex. Nulla nec
+          lobortis felis, ut porta dolor. Vivamus lacinia turpis in lectus tempus
+          maximus. Sed id augue tortor. Nulla facilisi. Donec eget suscipit
+          nulla. Maecenas eu convallis velit.
+        </p>
+        <p>
+          Vestibulum sed libero consectetur, tincidunt ipsum non, hendrerit
+          tellus. Nulla semper condimentum est, quis posuere urna volutpat nec.
+          Nunc mauris magna, tristique ullamcorper cursus at, pretium nec
+          sapien. Nulla mauris elit, vehicula ut nulla in, faucibus venenatis
+          nisi. Sed non cursus dui, non condimentum leo. Etiam tristique orci
+          lorem, non rutrum diam faucibus id. Mauris dui purus, dictum sit amet
+          metus a, iaculis varius felis. Integer hendrerit ex sed mauris
+          volutpat, sed malesuada quam sollicitudin. Integer pharetra mi eu mi
+          vehicula molestie. Sed vulputate rutrum elementum. Sed mollis
+          hendrerit massa, a tristique nibh gravida sit amet. Nullam quis
+          pulvinar sem, pretium placerat elit.
+        </p>
+        <p>
+          Maecenas ut lectus porttitor, convallis enim at, iaculis elit. Aenean
+          massa tellus, ultricies ac arcu et, scelerisque bibendum justo. Etiam
+          sed lectus id tortor volutpat pharetra faucibus non urna. Duis et
+          purus a augue tempor venenatis. Quisque at enim lobortis, vestibulum
+          nisi et, viverra mi. Praesent in ante sed arcu aliquam fringilla at
+          at nulla. Curabitur accumsan massa orci, vel accumsan mi rhoncus sit
+          amet. Proin vitae iaculis augue. Vivamus nec cursus libero, id mollis
+          ligula. Vivamus in venenatis ex, vitae lobortis dolor. Sed eu gravida
+          odio, scelerisque egestas elit.
+        </p>
+
+        <div class="overlay">
+          <div class="modal">
+            <header>
+              <span>Some Important Message</span>
+              <button class="close"></button>
+            </header>
+
+            <article>
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+              Some modal message/content.
+            </article>
+
+            <footer>
+              <button class="btn btn-red">Cancel</button>
+              <button class="btn btn-blue">OK</button>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const overlay  = document.querySelector('.overlay');
+      const btnModal = document.querySelector('#btnModal');
+      const btnClose = document.querySelector('.overlay header button.close');
+
+      btnModal.onclick = () => overlay.classList.toggle('open');
+      btnClose.onclick = () => overlay.classList.toggle('open');
+    </script>
+  </body>
+</html>
+
