@@ -34,6 +34,7 @@
     @extend .row-jstfy-btwn;
     @extend .row-algn-cntr;
     @include subtle-shadow();
+    flex-wrap: nowrap;
     font-weight: bold;
 
     /* The close button, which is two transformed lines that make an X. */
