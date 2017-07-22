@@ -35,3 +35,8 @@
 .circle {
   @include circle();
 }
+
+/* Widths. */
+.full-width {
+  width: 100%;
+}

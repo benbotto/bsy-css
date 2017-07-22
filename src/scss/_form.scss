@@ -1,0 +1,32 @@
+.form-group {
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5rem;
+  }
+
+  input:not([type]),
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="text"] {
+    @include border-radius();
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    color: $border-color-dark;
+    border: 3px solid $bg-color-primary;
+    box-shadow: none;
+    transition: border-color $transition-timing-function-primary $transition-duration-primary;
+
+    &:focus {
+      border-color: $pink;
+      outline: 0;
+    }
+  }
+}
