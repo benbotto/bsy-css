@@ -1,10 +1,10 @@
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: $gutter-size;
 
   label {
     display: block;
     font-weight: bold;
-    margin-bottom: .5rem;
+    margin-bottom: $gutter-size/2;
   }
 
   input:not([type]),
@@ -17,8 +17,8 @@
     @include border-radius();
     display: block;
     width: 100%;
-    padding: .5rem 1rem;
-    font-size: 1rem;
+    padding: $gutter-size/2 $gutter-size;
+    font-size: $gutter-size;
     color: $border-color-dark;
     border: 3px solid $bg-color-primary;
     box-shadow: none;
@@ -29,4 +29,18 @@
       outline: 0;
     }
   }
+
+  ::-webkit-input-placeholder { color: lighten($border-color-dark, 50); }
+  ::-moz-placeholder          { color: lighten($border-color-dark, 50); }
+  :-ms-input-placeholder      { color: lighten($border-color-dark, 50); }
+  :-moz-placeholder           { color: lighten($border-color-dark, 50); }
 }
+
+.input-group {
+  display: flex;
+
+  & > * {
+    flex: 1;
+  }
+}
+
