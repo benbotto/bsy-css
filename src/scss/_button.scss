@@ -10,8 +10,11 @@
   @include border-radius();
 
   .fa {
+    width: 20px;
+  }
+
+  .fa.brdr-r {
     border-right: 1px solid $fg-color-primary;
-    padding-right: .5rem;
   }
 }
 
