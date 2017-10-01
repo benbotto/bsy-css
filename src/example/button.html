@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Button Example</title>
+
+    <link rel="stylesheet" href="../../build/bsy.css">
+
+    <style type="text/css">
+      .main {
+        min-height: 100vh;
+        background-color: #333;
+        color: #ccc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main col col-jstfy-cntr">
+      <div class="row row-jstfy-cntr">
+        <div class="col cell">
+          <button class="btn btn-pink" type="button">.btn .btn-pink</button>
+          <button class="btn btn-blue" type="button" id="btnLoad">
+            <div class="loading-btn-inner">
+              <div class="loading-btn-content">
+                .btn .btn-blue
+              </div>
+
+              <div class="loading-spinner"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const btnLoad = document.getElementById('btnLoad');
+      btnLoad.onclick = toggleLoading;
+
+      function toggleLoading() {
+        if (btnLoad.classList.contains('loading'))
+          btnLoad.classList.remove('loading');
+        else
+          btnLoad.classList.add('loading');
+      }
+    </script>
+  </body>
+</html>
+

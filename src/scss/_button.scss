@@ -16,6 +16,25 @@
   .fa.brdr-r {
     border-right: 1px solid $fg-color-primary;
   }
+
+  .loading-btn-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .loading-spinner {
+      width: 0;
+      height: 0;
+      margin-left: 0;
+      transition: width .1s linear, height .1s linear, margin-left .1s linear;
+    }
+  }
+
+  &.loading .loading-btn-inner .loading-spinner {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 1rem;
+  }
 }
 
 .btn:hover {
@@ -35,3 +54,4 @@
 .btn[disabled] {
   background-color: $disabled;
 }
+
