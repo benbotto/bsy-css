@@ -1,11 +1,11 @@
-.loading {
+.loading-spinner {
   position: relative;
   width: 50px;
   height: 50px;
 }
 
-.loading::before,
-.loading::after {
+.loading-spinner::before,
+.loading-spinner::after {
   content: '';
   display: block;
   position: absolute;
@@ -19,10 +19,10 @@
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.loading::before {
+.loading-spinner::before {
 }
 
-.loading::after {
+.loading-spinner::after {
   animation-delay: -.5s;
   animation-direction: reverse;
 }
