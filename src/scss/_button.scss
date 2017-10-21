@@ -19,7 +19,7 @@
 
   .loading-btn-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     .loading-spinner {
@@ -37,10 +37,6 @@
   }
 }
 
-.btn:hover {
-  background-color: darken($bg-color-primary, 5%);
-}
-
 .btn-red      { background-color: $red;      }
 .btn-green    { background-color: $green;    }
 .btn-blue     { background-color: $blue;     }
@@ -50,6 +46,16 @@
 .btn-facebook { background-color: $facebook; }
 .btn-twitter  { background-color: $twitter;  }
 .btn-github   { background-color: $github;   }
+
+.btn-red:hover      { background-color: darken($red,      5%); }
+.btn-green:hover    { background-color: darken($green,    5%); }
+.btn-blue:hover     { background-color: darken($blue,     5%); }
+.btn-purple:hover   { background-color: darken($purple,   5%); }
+.btn-pink:hover     { background-color: darken($pink,     5%); }
+.btn-google:hover   { background-color: darken($google,   5%); }
+.btn-facebook:hover { background-color: darken($facebook, 5%); }
+.btn-twitter:hover  { background-color: darken($twitter,  5%); }
+.btn-github:hover   { background-color: darken($github,   5%); }
 
 .btn[disabled] {
   background-color: $disabled;
