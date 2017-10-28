@@ -1,0 +1,19 @@
+.list-group {
+  @include subtle-shadow();
+
+  .list-group-item {
+    padding: $gutter-size;
+    background-color: $pink;
+    border-bottom: 1px solid $border-color-dark;
+  }
+
+  .list-group-item:first-child {
+    @include border-radius-t();
+  }
+
+  .list-group-item:last-child {
+    @include border-radius-b();
+    border-bottom: none;
+  }
+}
+
