@@ -18,7 +18,8 @@ form {
   input[type="password"],
   input[type="tel"],
   input[type="url"],
-  input[type="text"] {
+  input[type="text"],
+  select {
     @include border-radius();
     display: block;
     width: 100%;
